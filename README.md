@@ -9,7 +9,7 @@ This document explains how to set up and run the **Phantom Islands** project usi
 To run the project you will need:
 
 * **TouchDesigner** (latest stable build recommended)
-* **The project file:** `phantomislands.toe`
+* **The project file:** `phantomislands.[highest_value].toe`
 * **ComfyUI Portable** installed and running on your machine
 
 ---
@@ -20,17 +20,18 @@ To run the project you will need:
 
 1. Download the latest **ComfyUI Windows Portable** build.
 2. Extract it to a location on your computer.
-3. Launch it using `run_cpu.bat` or `run_nvidia_gpu.bat`, depending on your system.
+3. Launch it using `python main.py` or other command, depending on your system.
 4. Keep ComfyUI running while using the Phantom Islands project.
+5. Copy API/ folder into ComfyUI_windows_portable\ComfyUI. This folder contains the ComfyUI workflow json files that are used.
 
-> **Note:** The path to your ComfyUI installation must match the configuration value in the TouchDesigner project.
+> **Note:** The path to your ComfyUI installation must match the configuration value in the TouchDesigner project. More on this in configuraiton section of README.
 
 ---
 
 ### **Step 2 — Open the TouchDesigner Project**
 
 1. Open **TouchDesigner**.
-2. Load the project file: `phantomislands.toe`.
+2. Load the project file: `phantomislands.[highest_value].toe`. Highiest value to be replaced with highiest build number for the project.
 
 Inside the network, locate the **Scripts** section at the top left of the network.
 There you’ll find the **`PhantomIsland`** component — this is where configuration settings can be edited.
@@ -46,7 +47,7 @@ The Phantom Islands project uses keyboard input to trigger different ComfyUI wor
 * **Press `1`** — Runs the **regular ComfyUI canny workflow**.
 * **Press `3`** — Runs the **inpainting workflow**.
 
-Make sure ComfyUI is running before triggering any workflows.
+Make sure ComfyUI is running before triggering any workflows. You must have touch designer GUI in focus to use keyboard commands. 
 
 ---
 
